@@ -9,8 +9,7 @@ const width = (Math.cos(skewRadians) * 0.5 + Math.tan(skewRadians) * Math.sin(sk
 const sideY = 0.5 + Math.sin(skewRadians) * 0.5;
 const sideX = -Math.cos(skewRadians);
 
-console.log(width * scale);
-console.log(width / 2 * scale);
-console.log(aspectRatio/width);
-console.log(sideY * scale);
-console.log(sideX * scale);
+console.log(`fullWidth: ${width * scale * aspectRatio/width}`);
+console.log(`center: ${width / 2 * scale * aspectRatio/width}`);
+console.log(`scale: ${aspectRatio/width}`)
+console.log(`connectionY: ${sideY * scale}`);
